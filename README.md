@@ -11,4 +11,4 @@ This is the source code for my personal website hosted on GitHub Pages.
 
 ## How to View the Website
 The website is hosted using GitHub Pages. You can view it by navigating to:
-https://<williamfernandoc-p>.github.io/
+https://williamfernandoc-p.github.io/
