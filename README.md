@@ -11,14 +11,4 @@ This is the source code for my personal website hosted on GitHub Pages.
 
 ## How to View the Website
 The website is hosted using GitHub Pages. You can view it by navigating to:
-https://<your-github-username>.github.io/
-
-
-## How to Clone and Modify
-To modify this website, clone the repository and edit the `index.html` file:
-
-```sh
-git clone https://github.com/<your-github-username>/<your-repository>.git
-cd <your-repository>
-
-
+https://<williamfernandoc-p>.github.io/
