@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Personal Website</title>
+    <title>William Fernando Chaparro-Pico</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -12,62 +12,171 @@
             text-align: center;
         }
         nav {
-            background-color: #333;
-            padding: 10px;
+            background-color: white;
+            padding: 15px;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            box-shadow: 0px 4px 2px -2px gray;
         }
         nav a {
-            color: white;
+            color: black;
             text-decoration: none;
             margin: 15px;
             font-size: 18px;
         }
+        .header-banner {
+            background-color: black;
+            color: white;
+            text-align: left;
+            display: flex;
+            align-items: stretch;
+            justify-content: space-between;
+            width: 100%;
+            height: 700px;
+            padding: 0;
+            overflow: hidden;
+        }
+        .header-text {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin-left: 20px;
+        }
+        .header-banner h1 {
+            color: white;
+            margin: 0;
+        }
+        .header-banner h2 {
+            color: white;
+            margin: 5px 0 0;
+            font-size: 18px;
+            font-weight: normal;
+        }
+        .header-banner img {
+            height: 100%;
+            width: auto;
+            max-width: 100%;
+            display: block;
+            margin-left: auto;
+            margin-right: 0;
+            padding: 0;
+        }
         section {
-            padding: 50px;
+            padding: 80px 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            text-align: left;
+            border-top: 3px solid #ddd;
+        }
+        .section-content {
+            display: flex;
+            align-items: center;
+            width: 80%;
+        }
+        #about .section-content img {
+            width: 350px;
+            height: auto;
+            max-height: 350px;
+            border-radius: 50%;
+            margin-right: 20px;
+        }
+        .section-title {
+            text-align: center;
+            font-size: 28px;
+            font-weight: bold;
+            margin-bottom: 20px;
         }
         .tweets {
             background-color: #f5f5f5;
             padding: 20px;
         }
+        .back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #333;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 14px;
+            cursor: pointer;
+        }
     </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            document.querySelector(".back-to-top").addEventListener("click", function(event) {
+                event.preventDefault();
+                window.scrollTo({ top: 0, behavior: "smooth" });
+            });
+        });
+    </script>
 </head>
 <body>
     <nav>
-        <a href="#home">Home</a>
+        <a href="#">Home</a>
+        <a href="#about">About Me</a>
         <a href="#research">Research</a>
         <a href="#publications">Publications</a>
         <a href="#projects">Projects</a>
+        <a href="#teaching">Teaching</a>
         <a href="#contact">Contact</a>
     </nav>
     
-    <section id="home">
-        <h1>Welcome</h1>
-        <p>Brief introduction and description of my work and areas of interest.</p>
-    </section>
-    
-    <div class="tweets">
-        <h2>Latest Tweets</h2>
-        <a class="twitter-timeline" data-theme="light" href="https://twitter.com/TwitterDev?ref_src=twsrc%5Etfw">Tweets by TwitterDev</a>
-        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+    <div class="header-banner">
+        <div class="header-text">
+            <h1>William Fernando Chaparro-Pico</h1>
+            <h2>Microbiologist, BS.c, MS.c</h2>
+        </div>
+        <img src="https://github.com/WilliamFernandoC-P/WilliamFernandoC-P.github.io/blob/main/Images/Picture1.png" alt="Banner Image">
     </div>
     
+    <section id="about">
+        <div class="section-content">
+            <img src="https://github.com/WilliamFernandoC-P/WilliamFernandoC-P.github.io/blob/main/Images/Picture2.png" alt="About Image">
+            <div>
+                <h1>About Me</h1>
+                <p>
+    I am a microbiologist from Colombia, graduated from the <strong>Universidad Industrial de Santander</strong> in Bucaramanga, Colombia (2022). 
+    Currently, I am pursuing a Master's degree in Microbiology with a focus on Virology (2023 - present).
+</p>
+<p>
+    My research experience includes participation in projects related to infectious diseases. During my MSc thesis, 
+    I worked on the molecular characterization of <strong>Respiratory Syncytial Virus</strong> and <strong>Rhinovirus</strong>, 
+    identifying their genotypes and clades through phylogenetic analysis. Additionally, I performed an in-depth molecular and phylogenetic analysis to infer the evolutionary history of these viruses, unveiling patterns of divergence, adaptation, and global and local dynamics.
+</p>
+<p>
+    My current research interests include <strong>virology, RNA viruses, respiratory viruses, and immune responses against viruses.</strong>
+</p>
+            </div>
+        </div>
+    </section>
+    
     <section id="research">
-        <h1>Research</h1>
-        <p>Information about my research interests and academic projects.</p>
+        <div class="section-title">Research</div>
     </section>
     
     <section id="publications">
-        <h1>Publications</h1>
-        <p>List of scientific articles and relevant works.</p>
+        <div class="section-title">Publications</div>
     </section>
     
     <section id="projects">
-        <h1>Projects</h1>
-        <p>Description of personal projects and collaborations.</p>
+        <div class="section-title">Projects</div>
+    </section>
+    
+    <section id="teaching">
+        <div class="section-title">Teaching</div>
     </section>
     
     <section id="contact">
-        <h1>Contact</h1>
-        <p>Contact information, social media, and ways to collaborate.</p>
+        <div class="section-title">Contact</div>
     </section>
+    
+    <a href="#" class="back-to-top">Back to Top</a>
 </body>
 </html>
