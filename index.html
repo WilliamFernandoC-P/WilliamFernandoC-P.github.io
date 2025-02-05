@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,8 +11,8 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            text-align: center;
         }
+        /* Navigation Bar */
         nav {
             background-color: white;
             padding: 15px;
@@ -20,81 +22,122 @@
             left: 0;
             z-index: 1000;
             box-shadow: 0px 4px 2px -2px gray;
+            text-align: center;
         }
         nav a {
             color: black;
             text-decoration: none;
-            margin: 15px;
+            margin: 10px;
             font-size: 18px;
+            padding: 5px 10px;
+            display: inline-block;
         }
+        /* Header Banner */
         .header-banner {
             background-color: black;
             color: white;
-            text-align: left;
             display: flex;
-            align-items: stretch;
+            align-items: center;
             justify-content: space-between;
             width: 100%;
-            height: 700px;
-            padding: 0;
-            overflow: hidden;
+            text-align: left;
+            height: auto;
         }
         .header-text {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            margin-left: 20px;
+            flex: 1;
+            padding-left: 40px;
         }
-        .header-banner h1 {
-            color: white;
+        .header-text h1 {
+            font-size: 32px;
             margin: 0;
         }
-        .header-banner h2 {
-            color: white;
-            margin: 5px 0 0;
+        .header-text h2 {
             font-size: 18px;
             font-weight: normal;
+            margin: 10px 0 0;
         }
         .header-banner img {
+            max-width: 50%;
             height: 100%;
-            width: auto;
-            max-width: 100%;
             display: block;
+            align-self: flex-end;
+            object-fit: cover;
             margin-left: auto;
-            margin-right: 0;
-            padding: 0;
         }
+        /* Content Sections */
         section {
-            padding: 80px 50px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
+            padding: 60px 20px;
             text-align: left;
-            border-top: 3px solid #ddd;
-        }
-        .section-content {
-            display: flex;
-            align-items: center;
-            width: 80%;
-        }
-        #about .section-content img {
-            width: 350px;
-            height: auto;
-            max-height: 350px;
-            border-radius: 50%;
-            margin-right: 20px;
+            max-width: 900px;
+            margin: auto;
+            background-color: #f9f9f9;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 40px;
         }
         .section-title {
             text-align: center;
             font-size: 28px;
             font-weight: bold;
             margin-bottom: 20px;
+            color: #333;
         }
-        .tweets {
-            background-color: #f5f5f5;
+        .about-container {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+        .about-container img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .about-text {
+            flex: 1;
+        }
+        .timeline {
+            position: relative;
+            max-width: 900px;
+            margin: auto;
+        }
+        .timeline-item {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+        .timeline-item img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .timeline-content {
+            flex: 1;
+            background-color: white;
             padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
         }
+        .timeline-year {
+            font-weight: bold;
+            font-size: 20px;
+            color: #555;
+        }
+        /* Contact Icons */
+        .contact-icons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        .contact-icons a img {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+        }
+        /* Back to Top Button */
         .back-to-top {
             position: fixed;
             bottom: 20px;
@@ -107,42 +150,45 @@
             font-size: 14px;
             cursor: pointer;
         }
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .timeline-item {
+                flex-direction: column;
+                text-align: center;
+            }
+            .about-container {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
     </style>
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            document.querySelector(".back-to-top").addEventListener("click", function(event) {
-                event.preventDefault();
-                window.scrollTo({ top: 0, behavior: "smooth" });
-            });
-        });
-    </script>
 </head>
+
 <body>
+    <!-- Navigation Bar -->
     <nav>
-        <a href="#">Home</a>
         <a href="#about">About Me</a>
         <a href="#research">Research</a>
-        <a href="#publications">Publications</a>
-        <a href="#projects">Projects</a>
         <a href="#teaching">Teaching</a>
         <a href="#contact">Contact</a>
     </nav>
     
+    <!-- Header Banner -->
     <div class="header-banner">
         <div class="header-text">
             <h1>William Fernando Chaparro-Pico</h1>
             <h2>Microbiologist, BS.c, MS.c</h2>
         </div>
-        <img src="Images/Picture1.png" alt="Banner Image">
+        <img src="images/Picture1.png" alt="Banner Image">
     </div>
     
+    <!-- About Me Section -->
     <section id="about">
-        <div class="section-content">
-            <img src="Images/Picture2.png" alt="About Image">
-            <div>
-                <h1>About Me</h1>
-                <p>
-    I am a microbiologist from Colombia, graduated from the <strong>Universidad Industrial de Santander</strong> in Bucaramanga, Colombia (2022). 
+        <h2 class="section-title">About Me</h2>
+        <div class="about-container">
+            <img src="images/Picture2.png" alt="Profile Image">
+            <div class="about-text">
+                <p>I am a microbiologist from Colombia, graduated from the <strong>Universidad Industrial de Santander</strong> in Bucaramanga, Colombia (2022). 
     Currently, I am pursuing a Master's degree in Microbiology with a focus on Virology (2023 - present).
 </p>
 <p>
@@ -151,32 +197,63 @@
     identifying their genotypes and clades through phylogenetic analysis. Additionally, I performed an in-depth molecular and phylogenetic analysis to infer the evolutionary history of these viruses, unveiling patterns of divergence, adaptation, and global and local dynamics.
 </p>
 <p>
-    My current research interests include <strong>virology, RNA viruses, respiratory viruses, and immune responses against viruses.</strong>
-</p>
+    My current research interests include <strong>virology, RNA viruses, respiratory viruses, and immune responses against viruses.</strong></p>
             </div>
         </div>
     </section>
     
+    <!-- Research Section -->
     <section id="research">
-        <div class="section-title">Research</div>
+        <h2 class="section-title">Research</h2>
+        <div class="timeline">
+            <div class="timeline-item">
+                <img src="images/Picture3.png" alt="Research Image">
+                <div class="timeline-content">
+                    <span class="timeline-year">2025</span>
+                    <h3>Master's thesis - Molecular epidemiology of Respiratory Syncytial Virus and Rhinovirus in the population of Santander during the years 2020–2024</h3>
+                    <p>A comprehensive study analyzing the molecular epidemiology of RSV and RV, identifying predominant genotypes, genetic variability, and evolutionary patterns across pandemic and post-pandemic periods.</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <img src="images/Picture4.png" alt="Research Image">
+                <div class="timeline-content">
+                    <span class="timeline-year">2021</span>
+                    <h3> Undergraduate thesis - Determination of the Effectiveness of Three Different Methods for Pretreatment of Human Saliva Samples Used in the Diagnosis of SARS-CoV-2 by Direct RT-qPCR</h3>
+                    <p>A study evaluating physical, chemical, and physicochemical methods to inactivate human saliva samples, assess RNA extraction efficiency, and compare detection accuracy via RT-qPCR.</p>
+                </div>
+            </div>
+        </div>
     </section>
-    
-    <section id="publications">
-        <div class="section-title">Publications</div>
-    </section>
-    
-    <section id="projects">
-        <div class="section-title">Projects</div>
-    </section>
-    
+
+ <!-- Teaching Section -->
     <section id="teaching">
-        <div class="section-title">Teaching</div>
+        <h2 class="section-title">Teaching</h2>
+        <ul>
+            <li><b>University Courses:</b>
+                <ul>
+                    <li>Adjunct Professor - General biology (February 2025 - Present) - Universidad Industrial de Santander</li>
+                    <li>Adjunct Professor - Molecular Biology (August 2024 - December 2024) - Universidad Industrial de Santander</li>
+                    <li>Adjunct Professor - Immunology (February 2024 - June 2024) - Universidad Industrial de Santander</li>
+                    <li>Adjunct Professor - Molecular Biology (January 2023 - February 2023) - Universidad Industrial de Santander</li>
+                </ul>
+            </li>
+        </ul>
     </section>
-    
+
+     <!-- Contact Section -->
+    <!-- Contact Section -->
     <section id="contact">
-        <div class="section-title">Contact</div>
+        <h2 class="section-title">Contact</h2>
+        <p><strong>Address:</strong> Carrera 32 # 29 - 31, Oficina 419, Edificio de laboratorios y administración, Facultad de Salud, Universidad Industrial de Santander</p>
+        <p><strong>Phone:</strong> +57 607 6344000 extension 3198</p>
+        <p><strong>Email:</strong> wifechap@correo.uis.edu.co</p>
+        <div class="contact-icons">
+            <a href="https://www.instagram.com/william.fcp/" target="_blank"><img src="images/Picture5.png" alt="Instagram"></a>
+            <a href="https://x.com/viralthinking?s=21" target="_blank"><img src="images/Picture6.png" alt="X"></a>
+            <a href="http://www.linkedin.com/in/william-f-chaparro-pico" target="_blank"><img src="images/Picture7.png" alt="LinkedIn"></a>
+        </div>
     </section>
-    
+
     <a href="#" class="back-to-top">Back to Top</a>
 </body>
 </html>
