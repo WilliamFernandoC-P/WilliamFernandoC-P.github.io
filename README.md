@@ -5,7 +5,7 @@ This is the source code for my personal website hosted on GitHub Pages.
 ## Features
 - **About Me:** A brief introduction about my work and areas of interest.
 - **Research:** Information on my research interests and academic projects.
-- **Teaching:** A list of the courses I have taught.
+- **Teaching & Employment:** A list of the courses I have taught and my employments.
 - **Contact:** Contact details, social media links, and ways to collaborate.
 
 ## How to View the Website
