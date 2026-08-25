@@ -1,18 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-<!DOCTYPE html>
-<html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>William Fernando Chaparro-Pico</title>
+
     <style>
+
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
         }
-        /* Navigation Bar */
+
+        /* ================================
+           Navigation Bar
+        ================================= */
+
         nav {
             background-color: white;
             padding: 15px;
@@ -24,6 +30,7 @@
             box-shadow: 0px 4px 2px -2px gray;
             text-align: center;
         }
+
         nav a {
             color: black;
             text-decoration: none;
@@ -32,7 +39,16 @@
             padding: 5px 10px;
             display: inline-block;
         }
-        /* Header Banner */
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+
+        /* ================================
+           Header Banner
+        ================================= */
+
         .header-banner { 
             background-color: black;
             color: white;
@@ -46,19 +62,23 @@
             position: relative;
             overflow: hidden;
         }
+
         .header-text {
             flex: 1;
             padding-left: 40px;
         }
+
         .header-text h1 {
             font-size: 32px;
             margin: 0;
         }
+
         .header-text h2 {
             font-size: 18px;
             font-weight: normal;
             margin: 10px 0 0;
         }
+
         .header-banner img {
             max-width: 50%;
             height: 100%;
@@ -68,27 +88,36 @@
             margin-left: auto;
         }
 
+
+        /* ================================
+           Image Credit
+        ================================= */
+
         .image-credit {
-    position: absolute;
-    bottom: 6px;
-    right: 10px;
-    font-size: 9px;
-    line-height: 1.2;
-    color: rgba(255, 255, 255, 0.7);
-    text-align: right;
-    z-index: 10;
-}
+            position: absolute;
+            bottom: 6px;
+            right: 10px;
+            font-size: 9px;
+            line-height: 1.2;
+            color: rgba(255, 255, 255, 0.7);
+            text-align: right;
+            z-index: 10;
+        }
 
-.image-credit a {
-    color: rgba(255, 255, 255, 0.8);
-    text-decoration: none;
-}
+        .image-credit a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+        }
 
-.image-credit a:hover {
-    text-decoration: underline;
-}
-        
-        /* Content Sections */
+        .image-credit a:hover {
+            text-decoration: underline;
+        }
+
+
+        /* ================================
+           Content Sections
+        ================================= */
+
         section {
             padding: 60px 20px;
             text-align: left;
@@ -99,6 +128,7 @@
             box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
             margin-bottom: 40px;
         }
+
         .section-title {
             text-align: center;
             font-size: 28px;
@@ -106,37 +136,54 @@
             margin-bottom: 20px;
             color: #333;
         }
+
+
+        /* ================================
+           About Me
+        ================================= */
+
         .about-container {
             display: flex;
             align-items: center;
             gap: 20px;
         }
+
         .about-container img {
             width: 200px;
             height: 200px;
             border-radius: 50%;
             box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
         }
+
         .about-text {
             flex: 1;
         }
+
+
+        /* ================================
+           Timeline / Research
+        ================================= */
+
         .timeline {
             position: relative;
             max-width: 900px;
             margin: auto;
         }
+
         .timeline-item {
             display: flex;
             align-items: center;
             gap: 20px;
             margin-bottom: 40px;
         }
+
         .timeline-item img {
             width: 150px;
             height: 150px;
             border-radius: 50%;
             box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
         }
+
         .timeline-content {
             flex: 1;
             background-color: white;
@@ -144,24 +191,54 @@
             border-radius: 10px;
             box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
         }
+
         .timeline-year {
             font-weight: bold;
             font-size: 20px;
             color: #555;
         }
-        /* Contact Icons */
+
+
+        /* ================================
+           Contact Icons
+        ================================= */
+
         .contact-icons {
             display: flex;
             justify-content: center;
             gap: 15px;
             margin-top: 20px;
         }
+
         .contact-icons a img {
             width: 30px;
             height: 30px;
             border-radius: 50%;
         }
-        /* Back to Top Button */
+
+
+        /* ================================
+           Visitor Counter
+        ================================= */
+
+        .visitor-counter {
+            text-align: center;
+            margin: 25px auto 30px;
+            font-size: 13px;
+            color: #777;
+        }
+
+        .visitor-counter img {
+            height: 18px;
+            vertical-align: middle;
+            opacity: 0.75;
+        }
+
+
+        /* ================================
+           Back to Top Button
+        ================================= */
+
         .back-to-top {
             position: fixed;
             bottom: 20px;
@@ -174,144 +251,571 @@
             font-size: 14px;
             cursor: pointer;
         }
-        /* Responsive Design */
+
+
+        /* ================================
+           Responsive Design
+        ================================= */
+
         @media (max-width: 768px) {
+
             .timeline-item {
                 flex-direction: column;
                 text-align: center;
             }
+
             .about-container {
                 flex-direction: column;
                 text-align: center;
             }
+
+            .header-banner {
+                flex-direction: column;
+                justify-content: center;
+                padding-top: 80px;
+                padding-bottom: 20px;
+            }
+
+            .header-text {
+                padding: 20px;
+                text-align: center;
+            }
+
+            .header-text h1 {
+                font-size: 26px;
+            }
+
+            .header-banner img {
+                max-width: 80%;
+                height: auto;
+                margin: 20px auto 0;
+            }
+
+            .image-credit {
+                font-size: 8px;
+                right: 5px;
+                bottom: 5px;
+            }
+
+            nav a {
+                font-size: 14px;
+                margin: 5px;
+            }
         }
+
     </style>
+
 </head>
 
+
 <body>
-    <!-- Navigation Bar -->
+
+
+    <!-- ================================
+         Navigation Bar
+    ================================= -->
+
     <nav>
-        <a href="#about">About Me</a>
-        <a href="#research">Research</a>
-        <a href="#Teaching-Employment">Teaching & Employment</a>
-        <a href="#contact">Contact</a>
+
+        <a href="#about">
+            About Me
+        </a>
+
+        <a href="#research">
+            Research
+        </a>
+
+        <a href="#teaching-employment">
+            Teaching & Employment
+        </a>
+
+        <a href="#contact">
+            Contact
+        </a>
+
     </nav>
-    
-    <!-- Header Banner -->
+
+
+    <!-- ================================
+         Header Banner
+    ================================= -->
+
     <div class="header-banner"> 
-    <div class="header-text"> 
-        <h1>William Fernando Chaparro-Pico</h1> 
-        <h2>Microbiologist, B.Sc., M.Sc. (Virology)</h2> 
-    </div> 
 
-    <img src="Images/Picture1.png" alt="Respiratory Droplet by David S. Goodsell"> 
+        <div class="header-text"> 
 
-    <div class="image-credit">
-        Respiratory Droplet (2020) — David S. Goodsell / <a href="https://www.rcsb.org/news/602eec4b3fed9e549afd7927?utm" target="_blank">RCSB Protein Data Bank</a>. 
-        Licensed under <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">CC BY 4.0</a>.
-    </div>
-</div>
-    
-<!-- About Me Section -->
-<section id="about">
-    <h2 class="section-title">About Me</h2>
-    <div class="about-container">
-        <img src="Images/Picture2.png" alt="Profile Image">
-        <div class="about-text">
-            <p>
-                I am a microbiologist from Colombia, graduated from the <strong>Universidad Industrial de Santander</strong> 
-                in Bucaramanga, Colombia in 2022. I received my <strong>MSc degree in Microbiology with a focus on Virology in 2025</strong>.
-                During my MSc thesis, I worked on the molecular characterization of <strong>Respiratory Syncytial Virus</strong> 
-                and <strong>Rhinovirus</strong>, identifying their genotypes and clades through phylogenetic analyses. 
-                I also performed in-depth molecular and phylogenetic analyses to infer the evolutionary history of these viruses, 
-                revealing patterns of divergence, adaptation, and global and local transmission dynamics.
-            </p>
-            <p>
-                I have a research background in respiratory virology and infectious diseases. Experienced in molecular and cellular biology, 
-                respiratory viral diagnostics, tropical infectious disease research and diagnostics, laboratory workflow implementation, 
-                sequencing technologies, and bioinformatic and statistical analysis of molecular and epidemiological data. 
-                Skilled in respiratory clinical sample collection and processing, RNA/DNA extraction, cell culture, multiple PCR-based approaches,
-                and protocol optimization, with hands-on experience working under BSL-1 and BSL-2 conditions and applying BSL-3 laboratory practices. 
-                Background in molecular virology, immunology, and host–pathogen interactions, complemented by teaching expe- rience in molecular biology 
-                and immunology for undergraduate biology students. Interested in research integrating respiratory viruses, molecular diagnostics, 
-                host–pathogen biology, and translational biomedical research.
-            </p>
-            
-            <p>
-                Currently, ...
-            </p>
-            <p>
-                My research interests include <strong>virology, RNA viruses, respiratory viruses, viral evolution, host/pathigen interactions, metagenomics, 
-                and tropical infectious diseases.</strong>
-            </p>
-            <a class="cv-button" href="https://github.com/WilliamFernandoC-P/WilliamFernandoC-P.github.io/blob/main/CV_Web_Page.pdf" target="_blank">My CV</a>
+            <h1>
+                William Fernando Chaparro-Pico
+            </h1> 
+
+            <h2>
+                Microbiologist, B.Sc., M.Sc. (Virology)
+            </h2>
+
+        </div> 
+
+
+        <img 
+            src="Images/Picture1.png" 
+            alt="Respiratory Droplet by David S. Goodsell"
+        > 
+
+
+        <div class="image-credit">
+
+            Respiratory Droplet (2020) — David S. Goodsell /
+
+            <a 
+                href="https://www.rcsb.org/news/602eec4b3fed9e549afd7927?utm" 
+                target="_blank"
+            >
+                RCSB Protein Data Bank
+            </a>. 
+
+            Licensed under 
+
+            <a 
+                href="https://creativecommons.org/licenses/by/4.0/" 
+                target="_blank"
+            >
+                CC BY 4.0
+            </a>.
+
         </div>
+
     </div>
-</section>
-    
-    <!-- Research Section -->
+
+
+
+    <!-- ================================
+         About Me Section
+    ================================= -->
+
+    <section id="about">
+
+        <h2 class="section-title">
+            About Me
+        </h2>
+
+
+        <div class="about-container">
+
+
+            <img 
+                src="Images/Picture2.png" 
+                alt="Profile Image"
+            >
+
+
+            <div class="about-text">
+
+
+                <p>
+
+                    I am a microbiologist from Colombia, graduated from the 
+                    <strong>
+                        Universidad Industrial de Santander
+                    </strong> 
+                    in Bucaramanga, Colombia in 2022. 
+
+                    I received my 
+                    <strong>
+                        MSc degree in Microbiology with a focus on Virology in 2025
+                    </strong>.
+
+                    During my MSc thesis, I worked on the molecular characterization of 
+                    <strong>
+                        Respiratory Syncytial Virus
+                    </strong> 
+                    and 
+                    <strong>
+                        Rhinovirus
+                    </strong>, 
+
+                    identifying their genotypes and clades through phylogenetic analyses. 
+
+                    I also performed in-depth molecular and phylogenetic analyses to infer 
+                    the evolutionary history of these viruses, revealing patterns of divergence, 
+                    adaptation, and global and local transmission dynamics.
+
+                </p>
+
+
+                <p>
+
+                    I have a research background in respiratory virology and infectious diseases. 
+
+                    Experienced in molecular and cellular biology, respiratory viral diagnostics, 
+                    tropical infectious disease research and diagnostics, laboratory workflow 
+                    implementation, sequencing technologies, and bioinformatic and statistical 
+                    analysis of molecular and epidemiological data. 
+
+                    Skilled in respiratory clinical sample collection and processing, RNA/DNA 
+                    extraction, cell culture, multiple PCR-based approaches, and protocol 
+                    optimization, with hands-on experience working under BSL-1 and BSL-2 
+                    conditions and applying BSL-3 laboratory practices. 
+
+                    Background in molecular virology, immunology, and host–pathogen interactions, 
+                    complemented by teaching experience in molecular biology and immunology 
+                    for undergraduate biology students. 
+
+                    Interested in research integrating respiratory viruses, molecular diagnostics, 
+                    host–pathogen biology, and translational biomedical research.
+
+                </p>
+
+
+                <p>
+                    Currently, ...
+                </p>
+
+
+                <p>
+
+                    My research interests include 
+
+                    <strong>
+                        virology, RNA viruses, respiratory viruses, viral evolution, 
+                        host/pathogen interactions, metagenomics, and tropical infectious diseases.
+                    </strong>
+
+                </p>
+
+
+                <a 
+                    class="cv-button" 
+                    href="https://github.com/WilliamFernandoC-P/WilliamFernandoC-P.github.io/blob/main/CV_Web_Page.pdf" 
+                    target="_blank"
+                >
+                    My CV
+                </a>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================================
+         Research Section
+    ================================= -->
+
     <section id="research">
-        <h2 class="section-title">Research</h2>
+
+        <h2 class="section-title">
+            Research
+        </h2>
+
+
         <div class="timeline">
+
+
+            <!-- Master's Thesis -->
+
             <div class="timeline-item">
-                <img src="Images/Picture3.png" alt="Research Image">
+
+
+                <img 
+                    src="Images/Picture3.png" 
+                    alt="Research Image"
+                >
+
+
                 <div class="timeline-content">
-                    <span class="timeline-year">2025</span>
-                    <h3>Master's thesis - Molecular epidemiology of Respiratory Syncytial Virus and Rhinovirus in the population of Santander during the years 2020–2024</h3>
-                    <p>A comprehensive study analyzing the molecular epidemiology of RSV and RV, identifying predominant genotypes, genetic variability, and evolutionary patterns across pandemic and post-pandemic periods.</p>
+
+
+                    <span class="timeline-year">
+                        2025
+                    </span>
+
+
+                    <h3>
+
+                        Master's thesis - Molecular epidemiology of Respiratory Syncytial Virus 
+                        and Rhinovirus in the population of Santander during the years 2020–2024
+
+                    </h3>
+
+
+                    <p>
+
+                        A comprehensive study analyzing the molecular epidemiology of RSV and RV, 
+                        identifying predominant genotypes, genetic variability, and evolutionary 
+                        patterns across pandemic and post-pandemic periods.
+
+                    </p>
+
+
                 </div>
+
             </div>
+
+
+
+            <!-- Undergraduate Thesis -->
+
             <div class="timeline-item">
-                <img src="Images/Picture4.png" alt="Research Image">
+
+
+                <img 
+                    src="Images/Picture4.png" 
+                    alt="Research Image"
+                >
+
+
                 <div class="timeline-content">
-                    <span class="timeline-year">2021</span>
-                    <h3> Undergraduate thesis - Determination of the Effectiveness of Three Different Methods for Pretreatment of Human Saliva Samples Used in the Diagnosis of SARS-CoV-2 by Direct RT-qPCR</h3>
-                    <p>A study evaluating physical, chemical, and physicochemical methods to inactivate human saliva samples, assess RNA extraction efficiency, and compare detection accuracy via RT-qPCR.</p>
+
+
+                    <span class="timeline-year">
+                        2021
+                    </span>
+
+
+                    <h3>
+
+                        Undergraduate thesis - Determination of the Effectiveness of Three Different 
+                        Methods for Pretreatment of Human Saliva Samples Used in the Diagnosis of 
+                        SARS-CoV-2 by Direct RT-qPCR
+
+                    </h3>
+
+
+                    <p>
+
+                        A study evaluating physical, chemical, and physicochemical methods to 
+                        inactivate human saliva samples, assess RNA extraction efficiency, and 
+                        compare detection accuracy via RT-qPCR.
+
+                    </p>
+
+
                 </div>
+
             </div>
+
+
         </div>
+
     </section>
 
-<!-- Teaching & Employment Section -->
-<section id="teaching-employment">
-    <h2 class="section-title">Teaching & Employment</h2>
-    <ul>
-        <li><b>University Courses:</b>
-            <ul>
-                <li>Part-time Lecturer - General Biology (February 2025 - June 2025) - Universidad Industrial de Santander</li>
-                <li>Part-time Lecturer - Molecular Biology (August 2024 - December 2024, January 2023 - February 2023) - Universidad Industrial de Santander</li>
-                <li>Part-time Lecturer - Immunology (February 2025 - June 2025, February 2024 - June 2024) - Universidad Industrial de Santander</li>
-            </ul>
-        </li>
-        <li><b>Employment:</b>
-            <ul>
-                <li>Research Engineer in Microbiology and Molecular Biology (DNA Sequencing (July 2025 – April 2026) – Ecopetrol (Colombia), PSL Proanalisis SAS BIC</li>
-                <li>Research Technician in Chagas disease cardiomyopathy: biomarkers of cardiac tissue (2024-2025) Universidad Industrial de Santander – Johns Hopkins University – Fundación Cardiovascular de Colombia </li>
-                <li>Research Technician in Viral Diagnostics (March 2023 – May 2023) Universidad Industrial de Santander, School of Microbiology, Bucaramanga, Colombia </li>
-                <li>Research Technician in Chagas disease research (August 2022 – December 2022) Universidad Industrial de Santander, School of Microbiology, Bucaramanga, Colombia  </li>
-            </ul>
-        </li>
-    </ul>
-</section>
 
 
-    <!-- Contact Section -->
+    <!-- ================================
+         Teaching & Employment Section
+    ================================= -->
+
+    <section id="teaching-employment">
+
+
+        <h2 class="section-title">
+            Teaching & Employment
+        </h2>
+
+
+        <ul>
+
+
+            <li>
+
+                <b>
+                    University Courses:
+                </b>
+
+
+                <ul>
+
+
+                    <li>
+
+                        Part-time Lecturer - General Biology 
+                        (February 2025 - June 2025) - 
+                        Universidad Industrial de Santander
+
+                    </li>
+
+
+                    <li>
+
+                        Part-time Lecturer - Molecular Biology 
+                        (August 2024 - December 2024, January 2023 - February 2023) - 
+                        Universidad Industrial de Santander
+
+                    </li>
+
+
+                    <li>
+
+                        Part-time Lecturer - Immunology 
+                        (February 2025 - June 2025, February 2024 - June 2024) - 
+                        Universidad Industrial de Santander
+
+                    </li>
+
+
+                </ul>
+
+            </li>
+
+
+            <li>
+
+                <b>
+                    Employment:
+                </b>
+
+
+                <ul>
+
+
+                    <li>
+
+                        Research Engineer in Microbiology and Molecular Biology 
+                        (DNA Sequencing (July 2025 – April 2026) – 
+                        Ecopetrol (Colombia), PSL Proanalisis SAS BIC
+
+                    </li>
+
+
+                    <li>
+
+                        Research Technician in Chagas disease cardiomyopathy: 
+                        biomarkers of cardiac tissue (2024-2025) 
+                        Universidad Industrial de Santander – 
+                        Johns Hopkins University – 
+                        Fundación Cardiovascular de Colombia
+
+                    </li>
+
+
+                    <li>
+
+                        Research Technician in Viral Diagnostics 
+                        (March 2023 – May 2023) 
+                        Universidad Industrial de Santander, 
+                        School of Microbiology, Bucaramanga, Colombia
+
+                    </li>
+
+
+                    <li>
+
+                        Research Technician in Chagas disease research 
+                        (August 2022 – December 2022) 
+                        Universidad Industrial de Santander, 
+                        School of Microbiology, Bucaramanga, Colombia
+
+                    </li>
+
+
+                </ul>
+
+            </li>
+
+
+        </ul>
+
+
+    </section>
+
+
+
+    <!-- ================================
+         Contact Section
+    ================================= -->
+
     <section id="contact">
-        <h2 class="section-title">Contact</h2>
-        <p><strong>Address:</strong>  </p>
-        <p><strong>Phone:</strong> +33 </p>
-        <p><strong>Email:</strong> </p>
+
+
+        <h2 class="section-title">
+            Contact
+        </h2>
+
+
+        <p>
+            <strong>
+                Address:
+            </strong>
+        </p>
+
+
+        <p>
+            <strong>
+                Phone:
+            </strong> 
+            +33
+        </p>
+
+
+        <p>
+            <strong>
+                Email:
+            </strong>
+        </p>
+
+
         <div class="contact-icons">
-            <a href="https://x.com/viralthinking?s=21" target="_blank"><img src="Images/Picture6.png" alt="X"></a>
-            <a href="http://www.linkedin.com/in/william-f-chaparro-pico" target="_blank"><img src="Images/Picture7.png" alt="LinkedIn"></a>
+
+
+            <a 
+                href="https://x.com/viralthinking?s=21" 
+                target="_blank"
+            >
+
+                <img 
+                    src="Images/Picture6.png" 
+                    alt="X"
+                >
+
+            </a>
+
+
+            <a 
+                href="http://www.linkedin.com/in/william-f-chaparro-pico" 
+                target="_blank"
+            >
+
+                <img 
+                    src="Images/Picture7.png" 
+                    alt="LinkedIn"
+                >
+
+            </a>
+
+
         </div>
+
+
     </section>
 
-    <a href="#" class="back-to-top">Back to Top</a>
+
+
+<!-- Visitor Counter -->
+<div class="visitor-counter">
+
+    <img 
+        src="https://hits.sh/williamfernandoc-p.github.io.svg"
+        alt="Website visitor counter"
+    >
+
+</div>
+
+
+
+    <!-- ================================
+         Back to Top Button
+    ================================= -->
+
+    <a 
+        href="#" 
+        class="back-to-top"
+    >
+        Back to Top
+    </a>
+
+
 </body>
+
 </html>
-
-
-
-
-
