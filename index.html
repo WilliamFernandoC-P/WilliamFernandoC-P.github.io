@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -9,11 +10,16 @@
 
     <style>
 
+        /* ================================
+           GENERAL
+        ================================= */
+
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
         }
+
 
         /* ================================
            Navigation Bar
@@ -218,18 +224,44 @@
 
 
         /* ================================
-           Visitor Counter
+           Visitor Statistics
         ================================= */
 
-        .visitor-counter {
+        .visitor-stats {
             text-align: center;
-            margin: 25px auto 30px;
+            margin: 35px auto 30px;
+            color: #777;
             font-size: 13px;
+        }
+
+        .visitor-stats-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .visitor-stat {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            color: #666;
+        }
+
+        .visitor-stat-label {
+            font-size: 12px;
             color: #777;
         }
 
-        .visitor-counter img {
-            height: 18px;
+        .visitor-stat-number {
+            font-size: 13px;
+            color: #333;
+            font-weight: normal;
+        }
+
+        .hits-counter {
+            height: 20px;
             vertical-align: middle;
             opacity: 0.75;
         }
@@ -301,6 +333,7 @@
                 font-size: 14px;
                 margin: 5px;
             }
+
         }
 
     </style>
@@ -792,15 +825,157 @@
 
 
 
-<!-- Visitor Counter -->
-<div class="visitor-counter">
+    <!-- ==================================================
+         VISITOR STATISTICS
+         
+         1. Hits = total requests / page loads
+         2. Unique visitors = deduplicated visitors
+            within a 30-minute window
+    =================================================== -->
 
-    <img 
-        src="https://hits.sh/williamfernandoc-p.github.io.svg"
-        alt="Website visitor counter"
-    >
+    <div class="visitor-stats">
 
-</div>
+
+        <div class="visitor-stats-container">
+
+
+            <!-- ================================
+                 HITS COUNTER
+            ================================= -->
+
+            <div class="visitor-stat">
+
+                <span class="visitor-stat-label">
+                    Hits:
+                </span>
+
+                <a 
+                    href="https://hits.sh/williamfernandoc-p.github.io/"
+                    target="_blank"
+                >
+
+                    <img
+                        class="hits-counter"
+                        src="https://hits.sh/williamfernandoc-p.github.io.svg?label=hits&labelColor=555&color=666"
+                        alt="Total website hits"
+                    >
+
+                </a>
+
+            </div>
+
+
+
+            <!-- ================================
+                 UNIQUE VISITORS
+            ================================= -->
+
+            <div class="visitor-stat">
+
+                <span class="visitor-stat-label">
+                    Unique visitors:
+                </span>
+
+                <span 
+                    class="visitor-stat-number"
+                    id="visitor-count"
+                >
+                    ...
+                </span>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+
+
+    <!-- ==================================================
+         PAGE VIEWS API TRACKING SCRIPT
+    =================================================== -->
+
+    <script
+        src="https://page-views-api.ratneshc.com/script"
+        data-site="williamfernandoc-p.github.io"
+        data-path="/"
+        defer>
+    </script>
+
+
+
+    <!-- ==================================================
+         PAGE VIEWS API - DISPLAY UNIQUE VISITOR COUNT
+    =================================================== -->
+
+    <script>
+
+        function updateVisitorCount() {
+
+            fetch(
+                "https://page-views-api.ratneshc.com/api/v1/views?site=williamfernandoc-p.github.io&path=/"
+            )
+
+            .then(response => {
+
+                if (!response.ok) {
+                    throw new Error("Unable to retrieve visitor count.");
+                }
+
+                return response.json();
+
+            })
+
+            .then(data => {
+
+                const counter = document.getElementById("visitor-count");
+
+                if (counter && typeof data.views !== "undefined") {
+
+                    counter.textContent = data.views.toLocaleString();
+
+                }
+
+            })
+
+            .catch(error => {
+
+                console.error(
+                    "Visitor counter error:",
+                    error
+                );
+
+                const counter = document.getElementById("visitor-count");
+
+                if (counter) {
+                    counter.textContent = "—";
+                }
+
+            });
+
+        }
+
+
+        /*
+         * Wait briefly so the tracking request has time
+         * to register the current visit before requesting
+         * the total number.
+         */
+
+        window.addEventListener(
+            "load",
+            function() {
+
+                setTimeout(
+                    updateVisitorCount,
+                    500
+                );
+
+            }
+        );
+
+    </script>
 
 
 
