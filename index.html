@@ -206,6 +206,111 @@
 
 
         /* ================================
+           Publications
+        ================================= */
+
+        .publications-list {
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+        }
+
+        .publication-card {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .pub-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 18px 20px;
+            cursor: pointer;
+        }
+
+        .pub-header:hover {
+            background-color: #fafafa;
+        }
+
+        .pub-year-badge {
+            flex-shrink: 0;
+            background-color: #333;
+            color: white;
+            font-weight: bold;
+            font-size: 15px;
+            padding: 6px 12px;
+            border-radius: 6px;
+            min-width: 40px;
+            text-align: center;
+        }
+
+        .pub-header-text {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .pub-title {
+            font-size: 17px;
+            font-weight: bold;
+            color: #222;
+            margin: 0 0 6px;
+        }
+
+        .pub-authors {
+            font-size: 14px;
+            color: #666;
+            margin: 0;
+        }
+
+        .pub-toggle-icon {
+            flex-shrink: 0;
+            font-size: 16px;
+            color: #777;
+            transition: transform 0.3s ease;
+        }
+
+        .publication-card.expanded .pub-toggle-icon {
+            transform: rotate(180deg);
+        }
+
+        .pub-details {
+            max-height: 0;
+            overflow: hidden;
+            padding: 0 20px;
+            transition: max-height 0.35s ease, padding 0.35s ease;
+        }
+
+        .publication-card.expanded .pub-details {
+            max-height: 300px;
+            padding: 16px 20px 20px;
+            border-top: 1px solid #eee;
+        }
+
+        .pub-journal {
+            font-size: 14px;
+            color: #444;
+            font-style: italic;
+            margin: 0 0 12px;
+        }
+
+        .pub-doi-link {
+            display: inline-block;
+            background-color: #333;
+            color: white;
+            text-decoration: none;
+            font-size: 13px;
+            padding: 8px 14px;
+            border-radius: 5px;
+        }
+
+        .pub-doi-link:hover {
+            background-color: #555;
+        }
+
+
+        /* ================================
            Contact Icons
         ================================= */
 
@@ -334,6 +439,35 @@
                 margin: 5px;
             }
 
+            .pub-header {
+                flex-wrap: wrap;
+                padding: 15px;
+            }
+
+            .pub-year-badge {
+                order: -1;
+            }
+
+            .pub-title {
+                font-size: 15px;
+            }
+
+            .pub-authors {
+                font-size: 13px;
+            }
+
+        }
+
+        @media (max-width: 480px) {
+
+            section {
+                padding: 40px 15px;
+            }
+
+            .pub-title {
+                font-size: 14.5px;
+            }
+
         }
 
     </style>
@@ -356,6 +490,10 @@
 
         <a href="#research">
             Research
+        </a>
+
+        <a href="#publications">
+            Publications
         </a>
 
         <a href="#teaching-employment">
@@ -629,6 +767,171 @@
 
             </div>
 
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================================
+         Publications Section
+    ================================= -->
+
+    <section id="publications">
+
+        <h2 class="section-title">
+            Publications
+        </h2>
+
+        <div class="publications-list">
+
+            <!-- Publication 1 -->
+            <div class="publication-card">
+
+                <div class="pub-header">
+
+                    <div class="pub-year-badge">
+                        2026
+                    </div>
+
+                    <div class="pub-header-text">
+
+                        <p class="pub-title">
+                            Molecular Epidemiology of Respiratory Syncytial Virus and Rhinovirus 
+                            in Santander, Colombia, During the COVID-19 Pandemic and 
+                            Post-Pandemic Periods, 2020–2024
+                        </p>
+
+                        <p class="pub-authors">
+                            Chaparro-Pico, W. F., Bueno, N., Lozano-Parra, A., Niederbacher, J., 
+                            Herrera, V., Sosa Ávila, L. M., Machuca Pérez, M. A., & Díaz Galvis, M. L.
+                        </p>
+
+                    </div>
+
+                    <div class="pub-toggle-icon">
+                        ▼
+                    </div>
+
+                </div>
+
+                <div class="pub-details">
+
+                    <p class="pub-journal">
+                        Viruses, 18(6), 666 (2026)
+                    </p>
+
+                    <a 
+                        class="pub-doi-link" 
+                        href="https://doi.org/10.3390/v18060666" 
+                        target="_blank"
+                    >
+                        View publication (DOI)
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- Publication 2 -->
+            <div class="publication-card">
+
+                <div class="pub-header">
+
+                    <div class="pub-year-badge">
+                        2025
+                    </div>
+
+                    <div class="pub-header-text">
+
+                        <p class="pub-title">
+                            Therapeutic challenges in central nervous system viral infections: 
+                            Advancing mesenchymal stem cell-based strategies for treating 
+                            neuroinflammation and promoting tissue repair
+                        </p>
+
+                        <p class="pub-authors">
+                            Carbone-Schellman, J., Fontecilla-Escobar, J., Sales-Salinas, N., 
+                            Chaparro-Pico, W. F., Molina-Berríos, A., Ruete, M. C., 
+                            González, P. A., Machuca, M. A., Opazo, M. C., Ezquer, M. E., 
+                            & Duarte, L. F.
+                        </p>
+
+                    </div>
+
+                    <div class="pub-toggle-icon">
+                        ▼
+                    </div>
+
+                </div>
+
+                <div class="pub-details">
+
+                    <p class="pub-journal">
+                        Frontiers in Immunology, 16 (2025)
+                    </p>
+
+                    <a 
+                        class="pub-doi-link" 
+                        href="https://doi.org/10.3389/fimmu.2025.1677433" 
+                        target="_blank"
+                    >
+                        View publication (DOI)
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- Publication 3 -->
+            <div class="publication-card">
+
+                <div class="pub-header">
+
+                    <div class="pub-year-badge">
+                        2025
+                    </div>
+
+                    <div class="pub-header-text">
+
+                        <p class="pub-title">
+                            Virus respiratorios en pacientes con síntomas de SARS-CoV-2 durante 
+                            el periodo pandémico en Santander, Colombia
+                        </p>
+
+                        <p class="pub-authors">
+                            Sosa, L. M., Díaz, M. L., Lozano-Parra, A., Bueno, N., Niño, D., 
+                            Herrera, V., Machuca, M. A., Chaparro-Pico, W. F., & Niederbacher, J.
+                        </p>
+
+                    </div>
+
+                    <div class="pub-toggle-icon">
+                        ▼
+                    </div>
+
+                </div>
+
+                <div class="pub-details">
+
+                    <p class="pub-journal">
+                        Salud UIS, 57, e25v57a19 (2025)
+                    </p>
+
+                    <a 
+                        class="pub-doi-link" 
+                        href="https://doi.org/10.18273/saluduis.57.e:25v57a19" 
+                        target="_blank"
+                    >
+                        View publication (DOI)
+                    </a>
+
+                </div>
+
+            </div>
 
         </div>
 
@@ -974,6 +1277,26 @@
 
             }
         );
+
+    </script>
+
+
+
+    <!-- ==================================================
+         PUBLICATIONS - EXPAND/COLLAPSE TOGGLE
+    =================================================== -->
+
+    <script>
+
+        document.querySelectorAll(".pub-header").forEach(function(header) {
+
+            header.addEventListener("click", function() {
+
+                header.parentElement.classList.toggle("expanded");
+
+            });
+
+        });
 
     </script>
 
